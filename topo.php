@@ -11,7 +11,7 @@
 		
 	<style>
 		body{
-			 background-image: url("imagens/inicial.png");	
+			 background-image: url("imagens/inicial.jpg");	
 			 background-size: cover;
 			 background-repeat: no-repeat;
 			

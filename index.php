@@ -60,7 +60,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <img src="imagens/icone_twitter.png" />
+	         <!--  <img src="imagens/icone_twitter.png" /> -->
 	        </div>
 	        
 	        <div id="navbar" class="navbar-collapse collapse">

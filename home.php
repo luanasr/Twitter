@@ -42,7 +42,7 @@
 	<head>
 		<meta charset="UTF-8">
 
-		<title>Twitter clone</title>
+		<title>Pagina Inicial</title>
 		
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -85,6 +85,29 @@
 
 				atualizaTweet();
 
+			function edit_it(caller){
+            edit = true;
+            let data = table.row($(caller).closest('tr')).data();
+            
+           // limpaModal();
+            //console.log(data);
+            document.getElementById('id_tweet').value = data[1];
+            document.getElementById('id_usuario').value = data[2];
+            document.getElementById('tweet').value = data[3];
+
+            editing_id = data[0];
+
+           // $('#modal').modal();
+        }
+
+        function delete_it(caller){
+            let data = table.row($(caller).closest('tr')).data();
+           
+            editing_id = data[0];
+
+            deleta();
+        }
+
 			});
 
 		</script>
@@ -103,7 +126,6 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <img src="imagens/icone_twitter.png" />
 	        </div>
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
