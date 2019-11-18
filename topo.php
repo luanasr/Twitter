@@ -20,11 +20,12 @@
 			align: center;
 			valign: middle;
 		}
+
 #inicio{
 	position: absolute;
 	background-color: white;	
-    width: 400px;
-    height: 160px;
+    width: 300px;
+    height: 100px;
     margin-top: -50px;
     margin-left: -150px;
     top: 20%;
@@ -70,6 +71,35 @@
     left: 40%;
 	text-align:center;
 }
+
+.img_table{
+    width: 25px; 
+    height: 25px;
+    transition: box-shadow 0.1s;
+    border-radius: 20px;
+}
+
+.img_table:hover{
+    box-shadow: 0 0 11px rgba(44, 44, 44, .9);
+}
+
+.img_table:active{
+    box-shadow: 0 0 11px rgba(44, 44, 44, .3);
+}
+
+  #table {
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    font-size: 13px;
+    background: #f1f1f1;
+    text-decoration: none;
+    color: #555;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 0px 0px #CCC;
+    text-shadow: 0 1px 0 #fff;
+  }
+</style>
+
 */
 	</style>
 	</head>

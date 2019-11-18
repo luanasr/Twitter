@@ -6,14 +6,14 @@
 
 
 <!DOCTYPE HTML>
+
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 
-	
+		<!-- animação - link cdn -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 		
-	<!--	<link rel="fav" href="./imagens/fav.png"/> -->
-
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 

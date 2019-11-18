@@ -12,7 +12,7 @@
 	$usuario_existe = false;
 	$email_existe = false;
 
-	//verificar se o usuário já
+	//verificar se o usuário já existe
 	$sql = " select * from usuarios where usuario = '$usuario' ";
 	if($resultado_id = mysqli_query($link, $sql)) {
 
@@ -25,7 +25,7 @@
 		echo 'Erro ao tentar localizar o registro de usuário';
 	}
 
-	//verificar se o e-mail já
+	//verificar se o e-mail já existe
 	$sql = " select * from usuarios where email = '$email' ";
 	if($resultado_id = mysqli_query($link, $sql)) {
 
@@ -59,9 +59,14 @@
 
 	//executar a query
 	if(mysqli_query($link, $sql)){
-		echo 'Usuário registrado com sucesso!';
+		echo ("<script>
+        window.alert('Usuário registrado com sucesso!')
+        window.location.href='../twitter-master/index.php';  </script>"); 
 	} else {
-		echo 'Erro ao registrar o usuário!';
+		echo ("<script>
+        window.alert('Erro ao registrar o usuário!'
+		window.location.href='../twitter-master/inscrevase.php';  </script>");
+		
 	}
 
 

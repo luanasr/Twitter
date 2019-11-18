@@ -23,12 +23,45 @@
 
 	if($resultado_id){
 
+		echo "<table border='0'>";
+
 		while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){
-			echo '<a href="#" class="list-group-item">';
+				
+			$usuario = $registro['usuario'];
+			$data_inclusao_formatada = $registro['data_inclusao_formatada'];
+			$tweet = $registro['tweet'];
+		//	$id - $registro['id_usuario'];
+
+		// NÃO FUNCIONA NADA 
+		
+			echo "<tr>
+					   <td>$usuario</td>
+					   <td>$data_inclusao_formatada</td> 
+					   <td>$tweet</td>
+					   <td>
+					   <input type='button' onclick= 'inscrevase.php' value='Editar'>
+					   </td>
+			</tr>";
+/*
+				echo '<a class="list-group-item">';
 				echo '<h4 class="list-group-item-heading">'.$registro['usuario'].' <small> - '.$registro['data_inclusao_formatada'].'</small></h4>';
-				echo '<p class="list-group-item-text">'.$registro['tweet'].'</p>';
-			echo '</a>';
+				echo '<li class="list-group-item-text">'.$registro['tweet'].'</li>';
+				echo '<class="list-group-item">'. 
+
+				
+		'</li>';
+				// echo < a href="#" class="list-group-item list-group-item-action">Editar </a> 
+					
+				//"<a href= editar.php id=? img src='../imagens/fav.png' >" funciona mas transforma linha td em editavel
+				// "<a href='editar.php? id=?". $registro['usuario']. "> Editar </a>";
+				//	"<img src='../imagens/fav.png'>";  
+
+		 '</a>'; 
+*/
 		}
+		
+   echo "</table>";
+	
 
 	} else {
 		echo 'Erro na consulta de tweets no banco de dados!';

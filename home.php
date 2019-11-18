@@ -43,6 +43,9 @@
 		<meta charset="UTF-8">
 
 		<title>Pagina Inicial</title>
+
+		<!-- animação - link cdn -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 		
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -74,7 +77,7 @@
 
 				function atualizaTweet(){
 					//carregar os tweets 
-
+					
 					$.ajax({
 						url: 'get_tweet.php',
 						success: function(data) {
@@ -84,29 +87,6 @@
 				}
 
 				atualizaTweet();
-
-			function edit_it(caller){
-            edit = true;
-            let data = table.row($(caller).closest('tr')).data();
-            
-           // limpaModal();
-            //console.log(data);
-            document.getElementById('id_tweet').value = data[1];
-            document.getElementById('id_usuario').value = data[2];
-            document.getElementById('tweet').value = data[3];
-
-            editing_id = data[0];
-
-           // $('#modal').modal();
-        }
-
-        function delete_it(caller){
-            let data = table.row($(caller).closest('tr')).data();
-           
-            editing_id = data[0];
-
-            deleta();
-        }
 
 			});
 
@@ -132,10 +112,9 @@
 	          <ul class="nav navbar-nav navbar-right">
 	            <li><a href="sair.php">Sair</a></li>
 	          </ul>
-	        </div><!--/.nav-collapse -->
+	        </div>
 	      </div>
 	    </nav>
-
 
 	    <div class="container">
 	    	<div class="col-md-3">
@@ -165,8 +144,10 @@
 	    				</form>
 	    			</div>
 	    		</div>
+	 
 
-	    		<div id="tweets" class="list-group"></div>
+			<!--  	<table id="my_table" class="display table-hover table-responsive" cellspacing="0" width="50%" >  -->
+	    		<div id="tweets" class="table"></div> 
 
 			</div>
 			<div class="col-md-3">
@@ -177,7 +158,6 @@
 				</div>
 			</div>
 		</div>
-
 
 	    </div>
 	

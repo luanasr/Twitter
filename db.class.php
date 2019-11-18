@@ -17,7 +17,8 @@ class db {
 	public function conecta_mysql(){
 
 		//criar a conexao
-		$con = mysqli_connect($this->host, $this->usuario, $this->senha, $this->database);
+		// setando as informações que a função precisa
+		$con = mysqli_connect($this->host, $this->usuario, $this->senha, $this->database); 
 
 		//ajustar o charset de comunicação entre a aplicação e o banco de dados
 		mysqli_set_charset($con, 'utf8');

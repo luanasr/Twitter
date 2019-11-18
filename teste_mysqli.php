@@ -2,8 +2,10 @@
 
 	require_once('db.class.php');
 
+
 	$sql = " SELECT * FROM usuarios where id = 7 ";
 
+	// objeto que testa a função ( coneção com o banco)
 	$objDb = new db();
 	$link = $objDb->conecta_mysql();
 
