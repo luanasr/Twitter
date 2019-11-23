@@ -20,7 +20,6 @@
 			align: center;
 			valign: middle;
 		}
-
 #inicio{
 	position: absolute;
 	background-color: white;	
@@ -71,22 +70,18 @@
     left: 40%;
 	text-align:center;
 }
-
 .img_table{
     width: 25px; 
     height: 25px;
     transition: box-shadow 0.1s;
     border-radius: 20px;
 }
-
 .img_table:hover{
     box-shadow: 0 0 11px rgba(44, 44, 44, .9);
 }
-
 .img_table:active{
     box-shadow: 0 0 11px rgba(44, 44, 44, .3);
 }
-
   #table {
     font-family: "Helvetica Neue", Helvetica, Arial;
     font-size: 13px;
@@ -100,7 +95,3 @@
   }
 </style>
 
-*/
-	</style>
-	</head>
-	<body>
